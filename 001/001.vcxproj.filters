@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="payloads.cpp">
+      <Filter>payload</Filter>
+    </ClCompile>
+    <ClCompile Include="wnd.cpp">
+      <Filter>payload\window</Filter>
+    </ClCompile>
+    <ClCompile Include="screen.cpp">
+      <Filter>payload\screen</Filter>
+    </ClCompile>
+    <ClCompile Include="callbacks.cpp">
+      <Filter>payload\callbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="math.cpp">
+      <Filter>001__API\math</Filter>
+    </ClCompile>
+    <ClCompile Include="gdi.cpp">
+      <Filter>001__API\gdi</Filter>
+    </ClCompile>
+    <ClCompile Include="reg.cpp">
+      <Filter>001__API\reg</Filter>
+    </ClCompile>
+    <ClCompile Include="string.cpp">
+      <Filter>001__API\string</Filter>
+    </ClCompile>
+    <ClCompile Include="NT.cpp">
+      <Filter>001__API\nt</Filter>
+    </ClCompile>
+    <ClCompile Include="flag.cpp">
+      <Filter>payload\flag</Filter>
+    </ClCompile>
+    <ClCompile Include="start.cpp">
+      <Filter>payload</Filter>
+    </ClCompile>
+    <ClCompile Include="extract.cpp">
+      <Filter>001__API\extract</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="001.h" />
+    <ClInclude Include="payloads.h">
+      <Filter>payload</Filter>
+    </ClInclude>
+    <ClInclude Include="001def.h">
+      <Filter>001__API</Filter>
+    </ClInclude>
+    <ClInclude Include="wnd.h">
+      <Filter>payload\window</Filter>
+    </ClInclude>
+    <ClInclude Include="screen.h">
+      <Filter>payload\screen</Filter>
+    </ClInclude>
+    <ClInclude Include="shlobj.h">
+      <Filter>001__API</Filter>
+    </ClInclude>
+    <ClInclude Include="callbacks.h">
+      <Filter>payload\callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="math.h">
+      <Filter>001__API\math</Filter>
+    </ClInclude>
+    <ClInclude Include="gdi.h">
+      <Filter>001__API\gdi</Filter>
+    </ClInclude>
+    <ClInclude Include="reg.h">
+      <Filter>001__API\reg</Filter>
+    </ClInclude>
+    <ClInclude Include="string.h">
+      <Filter>001__API\string</Filter>
+    </ClInclude>
+    <ClInclude Include="NT.h">
+      <Filter>001__API\nt</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="flag.h">
+      <Filter>payload\flag</Filter>
+    </ClInclude>
+    <ClInclude Include="start.h">
+      <Filter>payload</Filter>
+    </ClInclude>
+    <ClInclude Include="extract.h">
+      <Filter>001__API\extract</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="payload">
+      <UniqueIdentifier>{56f4b629-415c-400e-a2e5-b6443565fdfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="001__API">
+      <UniqueIdentifier>{7a16c354-14d2-4e6b-9baa-40e82a7387c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="payload\window">
+      <UniqueIdentifier>{03e822e5-21d5-4da3-bfd4-a1075b0e5941}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="payload\screen">
+      <UniqueIdentifier>{f93286d1-d4f5-4cdc-b86a-c7bcb1601663}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="payload\callbacks">
+      <UniqueIdentifier>{fd074f86-c08f-4dbe-aa22-9bd68213abb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="001__API\math">
+      <UniqueIdentifier>{321079fd-1e20-4fc1-b3cc-20d0f29ba324}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="001__API\gdi">
+      <UniqueIdentifier>{c39c7618-ad4b-4be5-901b-58ee81968dc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="001__API\reg">
+      <UniqueIdentifier>{82ef9eeb-a659-461b-bab2-c1f6c6e529e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="001__API\string">
+      <UniqueIdentifier>{76b2eb90-9c93-4778-9fd6-a672db3ca475}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="001__API\nt">
+      <UniqueIdentifier>{140247e3-cf45-4929-b2cc-0f70bb76a651}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="payload\flag">
+      <UniqueIdentifier>{03560e5c-5b9b-4e68-b4ea-97604ed4ea3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="001__API\extract">
+      <UniqueIdentifier>{64f938b8-a8f8-465e-b0aa-dbd0fedefb24}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="001.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\001.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="manifest.xml" />
+  </ItemGroup>
+</Project>
